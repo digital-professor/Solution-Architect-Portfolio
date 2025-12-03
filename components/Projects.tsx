@@ -228,7 +228,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
 
 export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   return (
-    <section id="projects" className="container mx-auto px-4 md:px-8 py-12 pb-24">
+    <section id="projects" className="container mx-auto px-4 md:px-8 pt-12 pb-0">
       <div className="max-w-6xl mx-auto">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} index={index} />

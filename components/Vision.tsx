@@ -10,12 +10,18 @@ interface VisionProps {
 }
 
 export const Vision: React.FC<VisionProps> = ({ id, title, description, features }) => {
+  const titleParts = title.split(':');
+  const mainTitle = titleParts[0];
+  const subTitle = titleParts[1] ? titleParts[1].trim() : "";
+
   return (
-    <section id={id} className="container mx-auto px-4 md:px-8 py-16 md:py-24">
+    <section id={id} className="container mx-auto px-4 md:px-8 pt-12 pb-16 md:pb-24">
       <div className="mx-auto grid max-w-5xl items-center gap-6 lg:grid-cols-1 lg:gap-12">
         <div className="space-y-6 text-center md:text-left">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
-            {title}
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter mb-6 leading-[1.1]">
+            {mainTitle}
+            {/* Render subTitle only if it exists */}
+            {subTitle && <span className="block text-slate-500 mt-2 text-2xl md:text-3xl lg:text-4xl font-light tracking-tight">{subTitle}</span>}
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto md:mx-0">
             {description}

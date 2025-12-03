@@ -187,7 +187,7 @@ Architectural focus was on **Data Sovereignty, Security, and Privacy (NFRs)**. I
     ],
     vision: {
       title: "The Student Advisor Toolkit: A Composable Architecture",
-      description: "These modules form the foundation of an integrated Student Advisor Toolkit—a composable architecture where each service operates independently but integrates seamlessly. The two-phase roadmap includes creating initial tools and scaling this into a fully integrated system: an embedded MS Teams app providing a unified interface, a GenAI-powered chatbot, and analytics to quantify advisory impact. This modular approach supports incremental delivery and change, and it informed the Phase 2 investment case and target-state design I presented to senior stakeholders.",
+      description: "These modules form the foundation of an integrated Student Advisor Toolkit: a composable architecture where each service operates independently but integrates seamlessly. The two-phase roadmap includes creating initial tools and scaling this into a fully integrated system: an embedded MS Teams app providing a unified interface, a GenAI-powered chatbot, and analytics to quantify advisory impact. This modular approach supports incremental delivery and change, and it informed the Phase 2 investment case and target-state design I presented to senior stakeholders.",
       features: [
         {
           name: "Integrated Suite",

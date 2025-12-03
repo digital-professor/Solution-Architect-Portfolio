@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yasser Riaz - Architecting the Student Experience</title>
+
+    <!-- Tailwind via CDN (fine for now, just noisy in console) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -11,9 +13,9 @@
           extend: {
             colors: {
               background: '#020617', // slate-950
-              primary: '#f8fafc', // slate-50
-              secondary: '#94a3b8', // slate-400
-              accent: '#3b82f6', // blue-500
+              primary: '#f8fafc',    // slate-50
+              secondary: '#94a3b8',  // slate-400
+              accent: '#3b82f6',     // blue-500
             },
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
@@ -23,7 +25,12 @@
         }
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -31,66 +38,47 @@
         color: #f8fafc;
         overflow-x: hidden;
       }
-      /* Smooth scrolling for anchor links */
       html {
         scroll-behavior: smooth;
         scroll-padding-top: 80px; /* Offset for fixed header */
-        /* Use proximity for the container to allow the browser to be "gentle" */
-        scroll-snap-type: y proximity; 
+        scroll-snap-type: y proximity;
       }
-      
-      /* 
-         Hero Section - Strong Snap 
-         This forces the scroll to stop at the hero if the user is scrolling near it,
-         creating that high-impact landing effect.
-      */
       .hero-sticky-wrapper {
         scroll-snap-align: start;
         scroll-snap-stop: always;
       }
-      
-      /* 
-         Content Sections - Natural Scroll
-         We explicitly do NOT set scroll-snap-align on generic sections.
-         This ensures the rest of the page scrolls freely (gentle) without 
-         hijacking the user's reading flow.
-      */
       section:not(.hero-sticky-wrapper) {
         scroll-snap-align: none;
       }
-      
-      /* Mesh Gradient Background matching provided image */
       .mesh-bg {
         background-color: #020617;
-        /* Noise texture overlay + Gradients */
-        background-image: 
-          /* Grainy Noise */
+        background-image:
           url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E"),
-          /* Warm Glow (Bottom Left) */
           radial-gradient(at 0% 100%, rgba(180, 80, 40, 0.25) 0px, transparent 60%),
-          /* Cool Glow (Top Right) */
           radial-gradient(at 100% 0%, rgba(50, 90, 160, 0.25) 0px, transparent 60%),
-          /* Dark Center/Fill */
           radial-gradient(at 50% 50%, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.6) 100%);
         background-repeat: repeat, no-repeat, no-repeat, no-repeat;
         background-size: 150px 150px, cover, cover, cover;
-        background-attachment: fixed; /* Fallback for parallax */
+        background-attachment: fixed;
       }
     </style>
   <script type="importmap">
 {
   "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+
+    <!-- IMPORTANT: point to the correct entry file -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

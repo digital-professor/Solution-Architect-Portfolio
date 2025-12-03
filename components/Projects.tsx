@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import type { Project } from "@/types";
 import ReactMarkdown from "react-markdown";
 import { motion, AnimatePresence } from "framer-motion";
@@ -195,7 +196,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
         </AnimatePresence>
 
         {/* Toggle Button */}
-        <div className="mt-8 pt-6 border-t border-white/5 flex justify-center">
+        <div className="mt-8 pt-6 border-t border-white/5 flex justify-start">
           <button
             onClick={handleTextToggle}
             className={`
@@ -228,7 +229,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
 
 export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   return (
-    <section id="projects" className="container mx-auto px-4 md:px-8 pt-12 pb-0">
+    <section id="projects" className="container mx-auto px-4 md:px-8 pt-0 pb-0">
       <div className="max-w-6xl mx-auto">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} index={index} />

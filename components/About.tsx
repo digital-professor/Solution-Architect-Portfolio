@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import type { Skill } from "@/types";
 import { Shield, ChevronRight, Layers, LayoutGrid } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -53,7 +54,7 @@ export const About: React.FC<AboutProps> = ({ title, description, imageUrl, imag
   const subTitle = titleParts[1] || "";
 
   return (
-    <section id="about" className="bg-slate-950 relative overflow-hidden py-24 border-t border-white/5">
+    <section id="about" className="bg-slate-950 relative overflow-hidden pt-12 pb-24 border-t border-white/5">
       {/* Blueprint Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       
@@ -86,10 +87,10 @@ export const About: React.FC<AboutProps> = ({ title, description, imageUrl, imag
                     <img
                       src={imageUrl}
                       alt={imageHint}
-                      className="w-full h-full object-cover grayscale opacity-30 group-hover:opacity-50 group-hover:grayscale-0 transition-all duration-700 ease-in-out"
+                      className="w-full h-full object-cover opacity-50 grayscale-[20%] group-hover:opacity-70 group-hover:grayscale-0 transition-all duration-700 ease-in-out"
                     />
-                    {/* Darker Gradient Overlay for Center Readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-slate-950/40" />
+                    {/* Consistent Dark Overlay for Readability */}
+                    <div className="absolute inset-0 bg-slate-950/75 group-hover:bg-slate-950/70 transition-colors duration-700" />
                  </div>
 
                  {/* Content Overlay */}
@@ -112,9 +113,9 @@ export const About: React.FC<AboutProps> = ({ title, description, imageUrl, imag
                     </div>
 
                     {/* Disclaimer Footnote - Anchored to Bottom */}
-                    <div className="pt-8 border-t border-white/10 flex items-start gap-3 mt-auto">
-                       <Shield className="w-4 h-4 text-slate-500 flex-shrink-0 mt-0.5" />
-                       <p className="text-[10px] text-slate-500 font-mono leading-relaxed uppercase tracking-wide opacity-80">
+                    <div className="pt-8 border-t border-white/20 flex items-start gap-3 mt-auto">
+                       <Shield className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
+                       <p className="text-[10px] text-slate-400 font-mono leading-relaxed uppercase tracking-wide opacity-90">
                          No personal or sensitive student data was processed using generative AI in any of these case studies.
                        </p>
                     </div>

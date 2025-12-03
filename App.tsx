@@ -251,10 +251,22 @@ Architectural focus was on **Data Sovereignty, Security, and Privacy (NFRs)**. I
           {/* 3) Case Studies Heading */}
           <AnimatedSection>
             <div className="container mx-auto px-4 md:px-8 pt-12 md:pt-24">
-              <div className="mb-12 text-center">
-                <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
-                  Solution Architecture Case Studies
+              <div className="max-w-6xl mx-auto mb-8 text-left">
+                
+                {/* Main Title & Subtitle */}
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter mb-6 leading-tight">
+                  Solution Architecture
+                  <span className="block text-slate-500 mt-2 text-2xl md:text-3xl lg:text-4xl font-light tracking-tight">Case Studies</span>
                 </h2>
+
+                {/* Accent Badge - MOVED BELOW */}
+                <div className="flex items-center gap-3">
+                    <span className="w-8 h-0.5 bg-blue-500 rounded-full"></span>
+                    <p className="text-sm font-bold text-blue-400 uppercase tracking-widest">
+                      Selected Works
+                    </p>
+                </div>
+
               </div>
             </div>
           </AnimatedSection>

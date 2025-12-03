@@ -176,7 +176,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
 
                   {/* Links */}
                   {project.link && project.link !== '#' && (
-                     <div className="mt-10 flex justify-end border-t border-white/5 pt-6">
+                     <div className="mt-10 flex justify-start border-t border-white/5 pt-6">
                         <a 
                           href={project.link}
                           target="_blank"

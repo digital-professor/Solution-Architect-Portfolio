@@ -153,7 +153,7 @@ I architected a standalone 'Fee Engine' that codified the statutory regulations 
           hint: "Logic flow diagram showing the Fee Calculation algorithm.",
         },
         tags: ["Composable Architecture", "Business Logic", "NFR: Compliance", "Modular Design"],
-        link: "#",
+        link: "https://feesandfunding.vercel.app/",
       },
       {
         title: "Architectural Spike: AI for Financial Wellbeing",
@@ -213,7 +213,7 @@ Architectural focus was on **Data Sovereignty, Security, and Privacy (NFRs)**. I
     socials: [
       { name: "LinkedIn", url: "#", icon: Linkedin },
       { name: "Twitter", url: "#", icon: Twitter },
-      { name: "Email", url: "mailto:yasser.riaz@example.com", icon: Mail },
+      { name: "Email", url: "mailto:yasserriaz@gmail.com", icon: Mail },
     ],
   };
 

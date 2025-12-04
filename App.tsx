@@ -250,7 +250,7 @@ Architectural focus was on **Data Sovereignty, Security, and Privacy (NFRs)**. I
           
           {/* 3) Case Studies Heading */}
           <AnimatedSection>
-            <div className="container mx-auto px-4 md:px-8 pt-12 md:pt-24">
+            <div id="projects" className="container mx-auto px-4 md:px-8 pt-12 md:pt-24 scroll-mt-24 outline-none">
               <div className="max-w-6xl mx-auto mb-8 text-left">
                 
                 {/* Main Title & Subtitle */}

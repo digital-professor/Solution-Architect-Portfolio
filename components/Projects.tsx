@@ -181,7 +181,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
                           href={project.link}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-blue-600 text-white font-bold text-sm hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/20 hover:scale-105"
+                          className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-blue-600 text-white font-bold text-sm hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/20"
                         >
                           View Live Demo
                           <ExternalLink className="w-4 h-4" />
@@ -203,7 +203,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
               group flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold transition-all duration-300
               ${isTextExpanded 
                 ? 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10' 
-                : 'bg-blue-600 text-white shadow-lg shadow-blue-900/20 hover:bg-blue-500 hover:scale-105'
+                : 'bg-blue-600 text-white shadow-lg shadow-blue-900/20 hover:bg-blue-500'
               }
             `}
           >
@@ -229,7 +229,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
 
 export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   return (
-    <section id="projects" className="container mx-auto px-4 md:px-8 pt-0 pb-0">
+    <section className="container mx-auto px-4 md:px-8 pt-0 pb-0">
       <div className="max-w-6xl mx-auto">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} index={index} />
